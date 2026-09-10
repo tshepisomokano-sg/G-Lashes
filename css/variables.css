@@ -1,0 +1,44 @@
+/*
+  G-Lashes design tokens
+  Blush pink / cream / coral / charcoal — same palette as the original build.
+  Colours use oklch() (supported in all modern browsers).
+*/
+:root {
+  --radius: 0.25rem;
+
+  --color-background: oklch(0.985 0.008 70);
+  --color-foreground: oklch(0.19 0.008 300);
+
+  --color-card: oklch(0.995 0.004 70);
+  --color-card-foreground: oklch(0.19 0.008 300);
+
+  /* Blush / dusty pink */
+  --color-primary: oklch(0.79 0.062 16);
+  --color-primary-foreground: oklch(0.19 0.008 300);
+
+  --color-secondary: oklch(0.955 0.017 20);
+  --color-secondary-foreground: oklch(0.24 0.008 300);
+
+  --color-muted: oklch(0.955 0.012 60);
+  --color-muted-foreground: oklch(0.48 0.014 20);
+
+  /* Coral / salmon */
+  --color-accent: oklch(0.74 0.104 25);
+  --color-accent-foreground: oklch(0.99 0.004 70);
+
+  --color-border: oklch(0.9 0.024 20);
+
+  --gradient-blush: linear-gradient(
+    160deg,
+    oklch(0.985 0.008 70) 0%,
+    oklch(0.955 0.022 20) 55%,
+    oklch(0.925 0.036 18) 100%
+  );
+
+  --shadow-soft: 0 20px 50px -28px oklch(0.55 0.08 20 / 0.45);
+  --shadow-lift: 0 30px 70px -35px oklch(0.45 0.09 20 / 0.55);
+
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Jost", ui-sans-serif, system-ui, sans-serif;
+  --tracking-wide-caps: 0.28em;
+}

@@ -1,0 +1,264 @@
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  border-bottom: 1px solid oklch(0.9 0.024 20 / 0.6);
+  background-color: oklch(0.985 0.008 70 / 0.85);
+  backdrop-filter: blur(8px);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: none;
+  align-items: center;
+  gap: 2rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-muted-foreground);
+}
+
+.nav-links a:hover {
+  color: var(--color-foreground);
+}
+
+@media (min-width: 640px) {
+  .nav-links {
+    display: flex;
+  }
+}
+
+/* Hero */
+.hero {
+  padding: 4rem 1.5rem;
+}
+
+.hero-inner {
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  margin-top: 1.25rem;
+  font-size: 3rem;
+  line-height: 1.05;
+}
+
+.hero h1 .accent-line {
+  display: block;
+  font-style: italic;
+}
+
+.hero-copy {
+  margin-top: 1.5rem;
+  max-width: 28rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--color-muted-foreground);
+}
+
+.hero-cta {
+  margin-top: 2.25rem;
+}
+
+.hero-hours {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-muted-foreground);
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: var(--radius);
+  object-fit: cover;
+  box-shadow: var(--shadow-lift);
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 6rem 1.5rem;
+  }
+  .hero-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero h1 {
+    font-size: 4.5rem;
+  }
+}
+
+/* Generic section spacing */
+.section {
+  padding: 6rem 1.5rem;
+  scroll-margin-top: 5rem;
+}
+
+.section-heading {
+  text-align: center;
+}
+
+.section-heading h2 {
+  margin-top: 1rem;
+  font-size: 2.25rem;
+}
+
+@media (min-width: 768px) {
+  .section-heading h2 {
+    font-size: 3rem;
+  }
+}
+
+/* Services */
+.services-list {
+  margin-top: 3.5rem;
+  display: grid;
+  gap: 1.5rem 3rem;
+}
+
+.service-row {
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 1rem;
+}
+
+.service-row-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.service-row-head h3 {
+  font-size: 1.25rem;
+}
+
+.service-row-head span {
+  font-size: 0.875rem;
+  color: var(--color-muted-foreground);
+  white-space: nowrap;
+}
+
+.service-row p {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  color: var(--color-muted-foreground);
+}
+
+.services-note {
+  margin-top: 2.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--color-muted-foreground);
+}
+
+@media (min-width: 640px) {
+  .services-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Studio */
+.studio-section {
+  background-color: var(--color-secondary);
+}
+
+.studio-inner {
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.studio-inner img {
+  border-radius: var(--radius);
+  object-fit: cover;
+  box-shadow: var(--shadow-soft);
+}
+
+.studio-copy p {
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--color-muted-foreground);
+}
+
+.studio-copy ul {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--color-muted-foreground);
+}
+
+.studio-copy ul li::before {
+  content: "\2013\00a0";
+}
+
+@media (min-width: 768px) {
+  .studio-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Contact */
+.contact-links {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.875rem;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.contact-link:hover {
+  color: var(--color-accent);
+}
+
+.contact-whatsapp {
+  margin-top: 2.5rem;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+}
+
+.site-footer p:first-child {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.site-footer p:last-child {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--color-muted-foreground);
+}

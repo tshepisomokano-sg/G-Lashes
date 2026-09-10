@@ -1,0 +1,68 @@
+<section id="book" class="section surface-blush">
+  <div class="wrap wrap-copy">
+    <div class="section-heading">
+      <p class="eyebrow">Online booking</p>
+      <h2>Choose your date &amp; time</h2>
+      <p class="hero-copy" style="margin-left:auto;margin-right:auto;text-align:center;">
+        Open every day, 7:00 am to 5:00 pm. Pick a day, choose an open slot and your
+        appointment is confirmed straight away.
+      </p>
+    </div>
+
+    <!-- Booking form (calendar + details) -->
+    <div id="booking-form-wrap" class="booking-grid">
+      <div class="booking-panel card-soft">
+        <div id="calendar" class="calendar"></div>
+
+        <div class="slot-section">
+          <p class="eyebrow">Available times</p>
+          <div id="slot-grid" class="slot-grid"></div>
+        </div>
+      </div>
+
+      <form id="booking-form" class="booking-panel card-soft booking-form">
+        <div>
+          <p class="eyebrow">Your treatment</p>
+          <div id="service-picker" class="service-picker">
+            <p class="eyebrow">Loading services…</p>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="client-name">Full name</label>
+            <input id="client-name" name="name" type="text" required />
+          </div>
+          <div class="field">
+            <label for="client-phone">Cell number</label>
+            <input id="client-phone" name="phone" type="tel" required />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="client-email">Email (optional)</label>
+          <input id="client-email" name="email" type="email" />
+        </div>
+
+        <div class="field">
+          <label for="client-notes">Anything we should know? (optional)</label>
+          <textarea id="client-notes" name="notes" rows="3"></textarea>
+        </div>
+
+        <p id="booking-summary" class="booking-summary">Select a date and time on the left.</p>
+
+        <button id="booking-submit" type="submit" class="btn btn-block" disabled>
+          Confirm booking
+        </button>
+      </form>
+    </div>
+
+    <!-- Confirmation panel (shown after a successful booking) -->
+    <div id="booking-confirmation" class="booking-confirmation card-soft hidden">
+      <p class="eyebrow">Booking confirmed</p>
+      <h3>See you soon</h3>
+      <p id="confirmation-details"></p>
+      <button id="book-another" class="btn" type="button">Book another appointment</button>
+    </div>
+  </div>
+</section>
